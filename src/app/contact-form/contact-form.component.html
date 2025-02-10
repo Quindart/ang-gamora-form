@@ -15,7 +15,7 @@
         />
         <div *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)" id="fullNameError" class="error">
           <div class="helper-text" *ngIf="fullName?.errors?.['required']">Full Name is required.</div>
-          <div class="helper-text" *ngIf="fullName?.errors?.['pattern']">Full Name must start with uppercase letters for each word.</div>
+          <div class="helper-text" *ngIf="fullName?.errors?.['pattern']">Full Name must be any words</div>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
         />
         <div *ngIf="contactForm.get('companyName')?.invalid && (contactForm.get('companyName')?.dirty || contactForm.get('companyName')?.touched)" id="companyNameError" class="error">
           <div  class="helper-text" *ngIf="contactForm.get('companyName')?.hasError('required')">Company Name is required.</div>
-          <div  class="helper-text" *ngIf="contactForm.get('companyName')?.hasError('pattern')">Company Name must start with uppercase letters for each word.</div>
+          <div  class="helper-text" *ngIf="contactForm.get('companyName')?.hasError('pattern')">Company Name must be any words.</div>
         </div>
       </div>
 
